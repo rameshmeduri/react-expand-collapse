@@ -1,0 +1,49 @@
+.cp {
+  padding: 20px;
+}
+
+.cp_toggle {
+  width: 100%;
+  margin: 1rem 0;
+  border: none;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  transition: background-color 300ms;
+}
+
+.cp_title {
+  font-weight: bold;
+}
+
+.cp_rotate90 {
+  transform: rotateZ(90deg);
+}
+
+.cp_icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 300ms cubic-bezier(0, 1, 0, 1);
+  will-change: transform;
+}
+
+.cp_icon_expanded {
+  transform: rotateZ(-179.99deg);
+}
+
+.cp_collapse {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cp_content {
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+  transition: 300ms;
+}
