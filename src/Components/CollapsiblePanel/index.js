@@ -23,7 +23,7 @@ class CollapsiblePanel extends Component {
     const { isOpen } = this.state;
 
     return (
-      <div className="cp">
+      <div>
         <div className="cp_toggle" onClick={() => this.toggle()}>
           <span className="cp_title">{title}</span>
           <div className="cp_rotate90">
@@ -34,9 +34,7 @@ class CollapsiblePanel extends Component {
             </svg>
           </div>
         </div>
-        <Collapse
-          isOpen={isOpen}
-          className="cp_collapse">
+        <Collapse className="cp_collapse" isOpen={isOpen}>
           <div className="cp_content">{children}</div>
         </Collapse>
       </div>
@@ -46,13 +44,12 @@ class CollapsiblePanel extends Component {
 }
 
 CollapsiblePanel.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool,
   title: PropTypes.string.isRequired
 }
 
 CollapsiblePanel.defaultProps = {
-  isOpen: false,
-  title: ''
+  isOpen: false
 }
 
 export default CollapsiblePanel;
