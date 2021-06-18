@@ -5,7 +5,6 @@ import { Collapse } from 'reactstrap';
 import './style.css';
 
 class CollapsiblePanel extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +27,7 @@ class CollapsiblePanel extends Component {
           <span className="cp_title">{title}</span>
           <div className="cp_rotate90">
             <svg
-              className={cx('cp_icon', { 'cp_icon_expanded': isOpen })}
+              className={cx('cp_icon', { cp_icon_expanded: isOpen })}
               viewBox="6 0 12 24">
               <polygon points="8 0 6 1.8 14.4 12 6 22.2 8 24 18 12" />
             </svg>
@@ -40,17 +39,15 @@ class CollapsiblePanel extends Component {
       </div>
     );
   }
-
 }
 
 CollapsiblePanel.propTypes = {
   isOpen: PropTypes.bool,
   title: PropTypes.string.isRequired
-}
+};
 
 CollapsiblePanel.defaultProps = {
   isOpen: false
-}
+};
 
 export default CollapsiblePanel;
-
