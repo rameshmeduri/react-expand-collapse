@@ -26,7 +26,8 @@
   },
   "lint-staged": {
     "src/**/*.js": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
   },
   "browserslist": {
