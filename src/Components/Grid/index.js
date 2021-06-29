@@ -5,8 +5,8 @@ const Grid = () => {
   return (
     <Row>
       <Col className="border">
-        <Row>
-<Col md="5" className="border">
+ <Row>
+          <Col md="5" className="border">
             1
           </Col>
           <Col md="6" className="border">
