@@ -6,7 +6,7 @@ const Grid = () => {
     <Row>
       <Col className="border">
         <Row>
-          <Col md="5" className="border">
+<Col md="5" className="border">
             1
           </Col>
           <Col md="6" className="border">

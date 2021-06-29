@@ -11,13 +11,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:staged": "cross-env CI=true react-scripts test --findRelatedTests",
-    "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/eslint src",
-    "lint:fix": "./node_modules/.bin/eslint src --fix"
+    "format": "prettier --write \"src/**/*.{jsx,js,css,json}\""
   },
   "lint-staged": {
     "src/**/*.js": [
@@ -27,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run format"
     }
   },  
   "browserslist": {
